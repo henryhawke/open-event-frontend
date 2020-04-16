@@ -18,7 +18,9 @@
     "lint:js": "eslint --fix app ember-cli-build.js testem.js tests",
     "lint:scss": "sass-lint -c .sass-lint.yml --verbose",
     "lint:hbs": "ember-template-lint .",
-    "postinstall": "node -e \"try { require('fs').symlinkSync(require('path').resolve('node_modules/@bower_components'), 'bower_components', 'junction') } catch (e) { }\""
+    "postinstall": "node -e \"try { require('fs').symlinkSync(require('path').resolve('node_modules/@bower_components'), 'bower_components', 'junction') } catch (e) { }\"",
+    "storybook": "start-storybook -p 6006 -s dist",
+    "build-storybook": "build-storybook -s dist"
   },
   "pre-commit": {
     "run": [
@@ -36,6 +38,11 @@
     "@sentry/browser": "^5.15.3",
     "@sentry/integrations": "^5.15.3",
     "@sentry/node": "^5.15.3",
+    "@storybook/addon-actions": "^5.3.18",
+    "@storybook/addon-links": "^5.3.18",
+    "@storybook/addons": "^5.3.18",
+    "@storybook/ember": "^5.3.18",
+    "@storybook/ember-cli-storybook": "^0.2.1",
     "@types/ember": "^3.1.2",
     "@types/ember-data": "^3.1.11",
     "@types/ember-qunit": "^3.4.8",
@@ -44,6 +51,7 @@
     "@types/rsvp": "^4.0.3",
     "async": "^3.2.0",
     "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.1.0",
     "broccoli-asset-rev": "^3.0.0",
     "broccoli-persistent-filter": "^2.0.0",
     "croppie": "^2.6.4",
